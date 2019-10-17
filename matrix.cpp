@@ -3,7 +3,9 @@ using namespace std;
 int matrix[10][10];
 int max_m,max_n;
 int sum;
-//struct array holds information about all the pebbles
+/*
+Desc: struct array holds information about all the pebbles
+*/
 struct array{
     int value; //value of the pebble
     int i; //row of the pebble
@@ -12,7 +14,13 @@ struct array{
 }array[100],temp;
 
 
-//The following function sorts the struct in descending order of pebble value using bubble sort
+/*
+Desc: The following function sorts the struct in descending order of pebble value using bubble sort
+
+Input: iterators(i, j), value -> value of the pebble
+
+return on a void
+*/
 void sort_value(int x){
     int i,j;
     for(i=0;i<x;i++)
@@ -26,7 +34,13 @@ void sort_value(int x){
     return;
 }
 
-//The following function sorts the struct in descending order of sum value using bubble sort
+/*
+Desc: The following function sorts the struct in descending order of sum value using bubble sort
+
+input: iterator(i, j)
+
+return: returns on a void
+*/
 void sort_sum(int x){
     int i,j;
     for(i=0;i<x;i++)
@@ -40,7 +54,13 @@ void sort_sum(int x){
     return;
 }
 
-//The following function calculates and returns the cost of having the pebble at position (m,n) in its path. Flag is set to 1 only when path needs to be displayed
+/*
+Desc: The following function calculates and returns the cost of having the pebble at position (m,n) in its path. Flag is set to 1 only when path needs to be displayed
+
+input: iterator(i, j)
+
+return: returns the sum of the  matrices
+*/
 int calc_cost(int m,int n,int flag){
     int i,j;
     i=j=0;  //Initial position is (0,0)
